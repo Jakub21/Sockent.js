@@ -1,0 +1,13 @@
+{
+  "name": "sockent.io",
+  "version": "0.1.0",
+  "description": "Event based socket.io wrapper",
+  "main": "index.js",
+  "keywords": [
+    "socket",
+    "event",
+    "wrapper"
+  ],
+  "author": "Jakub21",
+  "license": "MIT"
+}
