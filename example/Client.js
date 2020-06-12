@@ -1,8 +1,10 @@
+const {Client, Event} = require('./Sockent.js');
 const loops_ps = 20;
-const snt = require('./index.js');
+const port = 55000;
+const address = 'http://127.0.0.1';
 
-let client = new snt.Client('http://127.0.0.1', 55000);
-client.connect();
+let client = new Client(address, port);
+
 client.on('hi', (evt) => {
   console.log('hi', evt.data);
 });
@@ -11,5 +13,5 @@ setInterval(function () {
 }, 1000/loops_ps);
 
 setInterval(function () {
-  client.transmit(new snt.Event('hello', {a:1, b:2}));
+  client.transmit(new Event('hello', {a:1, b:2}));
 }, 1250);
