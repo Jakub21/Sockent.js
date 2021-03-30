@@ -1,4 +1,5 @@
 from os import walk
+import json
 
 def build(name, version, repo, license, dir):
   header = f'''// {name} v{version}
@@ -22,9 +23,9 @@ def build(name, version, repo, license, dir):
   return source
 
 if __name__ == '__main__':
-  name = 'Sockent.js'
-  version = '0.1.0'
-  repo = 'https://github.com/Jakub21/Sockent.js'
+  name = 'Sockevt.js'
+  version = json.load(open('package.json'))['version']
+  repo = 'https://github.com/Jakub21/sockevt.js'
   license = 'MIT'
   dir = './source'
   source = build(name, version, repo, license, dir)

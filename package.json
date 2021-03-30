@@ -1,6 +1,6 @@
 {
-  "name": "sockent.io",
-  "version": "0.1.0",
+  "name": "@jakub21/sockevt",
+  "version": "0.1.1",
   "description": "Event based socket.io wrapper",
   "main": "index.js",
   "keywords": [
